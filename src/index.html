@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    <div class="container mx-auto max-w-screen-xl ">
+        <h1 class="text-center p-7 text-4xl font-bold">Income Expense Calculator </h1>
+
+        <!-- Overview Section -->
+        <div class="overview border bg-orange-200">
+            <h3 class="text-center p-5 text-2xl font-bold">Overview</h3>
+            <div class="total p-5 flex justify-evenly text-xl font-semibold">
+                <p>Total Income: <span class="text-green-700" id="total-income">0</span></p>
+                <p>Total Expenses: <span class="text-red-600" id="total-expenses">0</span></p>
+                <p>Net Balance: <span class="text-blue-800" id="net-balance">0</span></p>
+            </div>
+        </div>
+    
+        <!-- Add Income / Expense Form -->
+        <div class="form flex justify-evenly p-10 border bg-blue-200 max-md:flex-col">
+            <input class="p-2 rounded" type="text" id="description" placeholder="Description" required />
+            <input class="p-2 rounded" type="number" id="amount" placeholder="Amount" required />
+            <input class="p-2 rounded" type="date" id="date" placeholder="Amount" required />
+            <select class="p-2 rounded cursor-pointer" id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <button class="border bg-green-500 p-2 font-semibold rounded hover:bg-[green]" onclick="addEntry()">Add Entry</button>
+        </div>
+
+        <!-- Entries Table -->
+        <div class="entries">
+            <h3 class="text-center font-bold text-xl text-[blue] p-2">Entries</h3>
+            <table id="entries-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
