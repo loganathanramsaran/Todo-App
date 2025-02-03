@@ -5,28 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo App</title>
   <link rel="stylesheet" href="./output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Jersey+20+Charted&family=Luckiest+Guy&family=Pacifico&family=Playwrite+VN:wght@100..400&family=Righteous&family=Sixtyfour&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+  <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
 </head>
 <body class="bg-[url(../src/assets/bmw2.jpg)] ">
 
-    <div class="container mx-auto max-w-screen-xl ">
-        <h1 class="text-center p-7 text-4xl text-white font-bold">Income Expense Calculator </h1>
+    <div class="container mx-auto max-w-screen-lg ">
+        <h1 class=" h1 text-center p-7 text-4xl text-white font-body1 animate-pulse">Income Expense Calculator </h1>
 
         <!-- Overview Section -->
         <div class="overview border bg-[#E7222E]">
-            <h3 class="text-center p-5 text-2xl font-bold max-sm:p-0">Overview</h3>
+            <h3 class="text-center p-5 text-2xl text-white max-sm:p-0 font-bold">Overview</h3>
             <div class="total p-5 flex justify-evenly text-xl font-semibold max-sm:flex-col max-sm:text-center ">
-                <p>Total Income: <span class="text-yellow-500" id="total-income">0</span></p>
-                <p>Total Expenses: <span class="text-blue-900" id="total-expenses">0</span></p>
-                <p>Net Balance: <span class="text-white" id="net-balance">0</span></p>
+                <p>Total Income: <span class="text-yellow-500 font-extrabold" id="total-income">0</span></p>
+                <p>Total Expenses: <span class="text-blue-900 font-extrabold" id="total-expenses">0</span></p>
+                <p>Net Balance: <span class="text-white font-extrabold" id="net-balance">0</span></p>
             </div>
         </div>
     
         <!-- Add Income / Expense Form -->
-        <div class="form flex justify-evenly p-10 border bg-[#16588E] max-md:flex-col">
-            <input class="p-2 rounded" type="text" id="description" placeholder="Description" required />
-            <input class="p-2 rounded" type="number" id="amount" placeholder="Amount" required />
-            <input class="p-2 rounded" type="date" id="date" placeholder="Amount" required />
-            <select class="p-2 rounded cursor-pointer" id="type">
+        <div class="form flex justify-evenly p-10 border bg-[#16588E] max-md:flex-col max-md:gap-3">
+            <input class="p-2 rounded hover:bg-slate-100 type="text" id="description" placeholder="Description" required />
+            <input class="p-2 rounded hover:bg-slate-100" type="number" id="amount" placeholder="Amount" required />
+            <input class="p-2 rounded hover:bg-slate-100 cursor-pointer" type="date" id="date" required />
+            <select class="p-2 rounded cursor-pointer hover:bg-slate-100 " id="type">
                 <option value="income">Income</option>
                 <option value="expense">Expense</option>
             </select>
