@@ -669,6 +669,30 @@ video {
   background-image: url(./src/public/bmw2.jpg);
 }
 
+.bg-\[url\(\/\)\]{
+  background-image: url(/);
+}
+
+.bg-\[url\(\/s\)\]{
+  background-image: url(/s);
+}
+
+.bg-\[url\(\)\]{
+  background-image: url();
+}
+
+.bg-\[url\(\"\"\)\]{
+  background-image: url("");
+}
+
+.bg-\[url\(\'\/\'\)\]{
+  background-image: url('/');
+}
+
+.bg-\[url\(\/src\/public\/bmw2\.jpg\)\]{
+  background-image: url(/src/public/bmw2.jpg);
+}
+
 .p-10{
   padding: 2.5rem;
 }
