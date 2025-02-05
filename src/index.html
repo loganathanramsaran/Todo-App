@@ -10,50 +10,50 @@
 <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Jersey+20+Charted&family=Luckiest+Guy&family=Pacifico&family=Playwrite+VN:wght@100..400&family=Righteous&family=Sixtyfour&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
   <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
 </head>
-<body class="bg-[url(../src/public/bmw.jpg)] ">
-    <div class="container mx-auto max-w-screen-lg ">
-        <h1 class=" h1 text-center p-7 text-4xl text-white font-body1 animate-pulse">Income Expense Calculator </h1>
+<body class="bg-[url(../src/public/bmw.jpg)]">
+    <div class="container mx-auto max-w-screen-xl ">
+            <h1 class=" h1 text-center p-7 text-4xl text-white font-body1 animate-pulse">Income Expense Calculator </h1>
 
-        <!-- Overview Section -->
-        <div class="overview border bg-[#E7222E]">
-            <h3 class="text-center p-5 text-2xl text-white max-sm:p-0 font-bold">Overview</h3>
-            <div class="total p-5 flex justify-evenly text-xl font-semibold max-sm:flex-col max-sm:text-center ">
-                <p>Total Income: <span class="text-yellow-500 font-extrabold" id="total-income">0</span></p>
-                <p>Total Expenses: <span class="text-blue-900 font-extrabold" id="total-expenses">0</span></p>
-                <p>Net Balance: <span class="text-white font-extrabold" id="net-balance">0</span></p>
+            <!-- Overview Section -->
+            <div class="overview border bg-[#E7222E]">
+                <h3 class="text-center p-5 text-2xl text-white max-sm:p-0 font-bold">Overview</h3>
+                <div class="total p-5 flex justify-evenly text-xl font-semibold max-sm:flex-col max-sm:text-center ">
+                    <p>Total Income: <span class="text-yellow-500 font-extrabold" id="total-income">0</span></p>
+                    <p>Total Expenses: <span class="text-blue-900 font-extrabold" id="total-expenses">0</span></p>
+                    <p>Net Balance: <span class="text-white font-extrabold" id="net-balance">0</span></p>
+                </div>
             </div>
-        </div>
-    
-        <!-- Add Income / Expense Form -->
-        <div class="form flex justify-evenly p-10 border bg-[#16588E] max-md:flex-col max-md:gap-3">
-            <input class="p-2 rounded hover:bg-slate-100 type="text" id="description" placeholder="Description" required />
-            <input class="p-2 rounded hover:bg-slate-100" type="number" id="amount" placeholder="Amount" required />
-            <input class="p-2 rounded hover:bg-slate-100 cursor-pointer" type="date" id="date" required />
-            <select class="p-2 rounded cursor-pointer hover:bg-slate-100 " id="type">
-                <option value="income">Income</option>
-                <option value="expense">Expense</option>
-            </select>
-            <button class="border bg-green-500 p-2 font-semibold rounded hover:bg-[green]" onclick="addEntry()">Add Entry</button>
-        </div>
+        
+            <!-- Add Income / Expense Form -->
+            <div class="form flex justify-evenly p-10 border bg-[#16588E] max-md:flex-col max-md:gap-3">
+                <input class="p-2 rounded hover:bg-slate-100 type="text" id="description" placeholder="Description" required />
+                <input class="p-2 rounded hover:bg-slate-100" type="number" id="amount" placeholder="Amount" required />
+                <input class="p-2 rounded hover:bg-slate-100 cursor-pointer" type="date" id="date" required />
+                <select class="p-2 rounded cursor-pointer hover:bg-slate-100 " id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button class="border bg-green-500 p-2 font-semibold rounded hover:bg-[green]" onclick="addEntry()">Add Entry</button>
+            </div>
 
-        <!-- Entries Table -->
-        <div class="entries bg-[#81C4FF]">
-            <h3 class="text-center font-bold text-xl text-[blue] p-2">Entries</h3>
-            <table class=" max-sm:text-wrap max-[400px]:flex-col " id="entries-table">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Description</th>
-                        <th>Amount</th>
-                        <th>Type</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+            <!-- Entries Table -->
+            <div class="entries bg-[#81C4FF]">
+                <h3 class="text-center font-bold text-xl text-[blue] p-2">Entries</h3>
+                <table class=" max-sm:text-wrap max-[400px]:flex-col " id="entries-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
     </div>
 
-    <script src="./script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html> 

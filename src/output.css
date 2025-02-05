@@ -603,8 +603,8 @@ video {
   display: table;
 }
 
-.max-w-screen-lg{
-  max-width: 1024px;
+.max-w-screen-xl{
+  max-width: 1280px;
 }
 
 @keyframes pulse{
