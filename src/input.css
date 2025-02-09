@@ -32,4 +32,6 @@
   .edit-btn:hover {
     @apply opacity-80;
   }
-  
+  .card{
+    @apply h-20 w-auto p-5 font-mono bg-gray-100 rounded-md shadow-xl border justify-evenly flex items-center max-sm:h-12
+  }
